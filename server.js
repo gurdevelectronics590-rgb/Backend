@@ -84,6 +84,10 @@ app.delete('/api/products/:id', async (req, res) => {
     }
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("Gurdev API is running ✅");
+});
+
 // --- 4. Server Start ---
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
